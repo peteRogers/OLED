@@ -7,8 +7,12 @@ Web link to convert images to show on screens [Make BITMAP IMAGES](https://javl.
 
 Get animated icons and emojis to show on OLED [WOKWI animator](https://animator.wokwi.com/)
 
+List of u8g2 fonts [U8G2 fonts](https://github.com/olikraus/u8g2/wiki/fntlist8)
+
+
 #### Wiring Labelling for OLED
-![alt text](https://github.com/peteRogers/Y1_PhysComp/blob/main/OLED/i2cGraphic.jpg "i2c graphics")
+![alt text](i2cGraphic.jpg "i2c graphics")
+
 
 #### Draw Image to Screen
 ```java
