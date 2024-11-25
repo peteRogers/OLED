@@ -3,25 +3,23 @@
 #include "lines.h"
 #include "displayManager.h"
 
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 64
 
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+Adafruit_SSD1306 display(128, 64, &Wire, -1);
+int currentFrame = 0;
 
 
 void setup() {
   display.begin(SSD1306_SWITCHCAPVCC, 0x3D); // could be 0x3C
   display.clearDisplay(); // Clear the buffer
- 
-}
+}//end setup
 
 
 void loop() {
-
-  for (int i = 0; i < totalFrames; i++) {
-    functionArray[i](); // Call each function in the array
+  
+  functionArray[frm]();
+  frm++;
+  if(frm == totalFrames){
+    frm = 0;
   }
-  //   for (int i = totalFrames-1; i > -1; i--) {
-  //     functionArray[i]();
-  // }
-}
+
+}//end loop
